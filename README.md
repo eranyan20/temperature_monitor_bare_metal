@@ -10,28 +10,38 @@ This project implements a **temperature monitoring system** on bare metal hardwa
 - Easy to extend for additional sensors or functionalities.
 
 ## Directory Structure
-── C_Implementation
-│   ├── Application
-│   │   └── App.c
-│   ├── HAL
-│   │   ├── ADC_Driver.c
-│   │   ├── GPIO_Driver.c
-│   │   └── I2C_Driver.c
-│   ├── Hardware
-│   │   └── Microcontroller.c
-│   ├── Include
-│   │   ├── ADC_Driver.h
-│   │   ├── EEPROM_Service.h
-│   │   ├── GPIO_Driver.h
-│   │   ├── I2C_Driver.h
-│   │   ├── LED_Service.h
-│   │   ├── Microcontroller.h
-│   │   └── temperature_Service.h
-│   ├── Makefile
-│   └── Services
-│       ├── EEPROM_Service.c
-│       ├── LED_service.c
-│       └── temperature_Service.c
+```bash
+└── temperature_monitor_bare_metal
+    ├── 21
+    ├── C_Implementation
+    │   ├── Application
+    │   │   └── App.c
+    │   ├── HAL
+    │   │   ├── ADC_Driver.c
+    │   │   ├── GPIO_Driver.c
+    │   │   └── I2C_Driver.c
+    │   ├── Hardware
+    │   │   └── Microcontroller.c
+    │   ├── Include
+    │   │   ├── ADC_Driver.h
+    │   │   ├── EEPROM_Service.h
+    │   │   ├── GPIO_Driver.h
+    │   │   ├── I2C_Driver.h
+    │   │   ├── LED_Service.h
+    │   │   ├── Microcontroller.h
+    │   │   └── temperature_Service.h
+    │   ├── Makefile
+    │   └── Services
+    │       ├── EEPROM_Service.c
+    │       ├── LED_service.c
+    │       └── temperature_Service.c
+    ├── Documentation
+    │   ├── System Architecture Final.png
+    │   └── System Architecture Temp Monitor Final.pdf
+    ├── LICENSE
+    └── README.md
+
+```
 
 ## Prerequisites
 - C compiler (GCC).
