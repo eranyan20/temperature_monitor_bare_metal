@@ -1,5 +1,6 @@
 #include "LED_Service.h"
 #include "GPIO_Driver.h"
+#include <stdio.h>
 
 void LED_Controller_Init(void) {
     printf("[LED Controller] Initialized\n");

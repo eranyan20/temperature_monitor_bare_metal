@@ -5,10 +5,10 @@
 
 typedef struct {
     uint8_t revision; // 0 for Rev-A, 1 for Rev-B
-    char serial[16];  // Hardware serial number
+    char serial[16];
 } EEPROM_Config;
 
 void EEPROM_Init(void);
 EEPROM_Config EEPROM_ReadConfig(void);
 
-#endif // EEPROM_H
+#endif

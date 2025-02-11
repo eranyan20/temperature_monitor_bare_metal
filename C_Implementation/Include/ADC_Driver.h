@@ -6,4 +6,4 @@
 void ADC_Init(void);
 int16_t ADC_Read(void);
 
-#endif // ADC_H#pragma once
+#endif // ADC_H

@@ -2,10 +2,12 @@
 #include "temperature_Service.h"
 #include "LED_Service.h"
 #include "EEPROM_Service.h"
+#include "I2C_Driver.h"
+#include "GPIO_Driver.h"
+#include "ADC_Driver.h"
 #include <stdio.h>
 #include <math.h>
 
-// ANSI color codes
 #define COLOR_RED     "\x1B[31m"
 #define COLOR_YELLOW  "\x1B[33m"
 #define COLOR_GREEN   "\x1B[32m"
@@ -27,7 +29,6 @@ void draw_gauge(float temperature) {
     fflush(stdout);
 }
 
-// Function to draw the LED status (remains on a separate line)
 void draw_led_status(float temperature) {
     const char* red = (temperature >= 105.0f || temperature < 5.0f) ? LED_ON : LED_OFF;
     const char* yellow = (temperature >= 85.0f && temperature < 105.0f) ? LED_ON : LED_OFF;
@@ -54,14 +55,12 @@ int main(void) {
 
     // Read hardware revision from EEPROM
     EEPROM_Config config = EEPROM_ReadConfig();
-    uint8_t revision = config.revision; // 0 for Rev-A, 1 for Rev-B
+    uint8_t revision = config.revision;
 
-    // Start the timer
     Timer_Start();
 
     float prev_temperature = -100.0f; // Initialize to random value
 
-    // Main loop
     while (1) {
         delay_us(100000000); // Simulated more than 100µs delay for demonstration of the solution in console
         timer_flag = true; // Set the timer flag

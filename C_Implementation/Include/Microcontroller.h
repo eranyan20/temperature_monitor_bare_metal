@@ -6,9 +6,9 @@
 
 // Clock Configuration
 typedef enum {
-    CLOCK_SOURCE_HSI, // High-Speed Internal Oscillator
-    CLOCK_SOURCE_HSE, // High-Speed External Oscillator
-    CLOCK_SOURCE_PLL  // Phase-Locked Loop
+    CLOCK_SOURCE_HSI,
+    CLOCK_SOURCE_HSE,
+    CLOCK_SOURCE_PLL
 } ClockSource;
 
 void Clock_Init(ClockSource source, uint32_t frequency);

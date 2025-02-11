@@ -1,10 +1,10 @@
 # Temperature Monitor - Bare Metal
 
 ## Overview
-This project implements a **temperature monitoring system** on bare metal hardware. The system reads temperature data from a sensor and visualizes the temperature using LED indicators. The project is designed to be simple and efficient, targeting embedded systems with minimal dependencies.
+This project implements a **temperature monitoring system** on bare metal hardware with mocked interfaces. The system reads temperature data from a sensor and visualizes the temperature using LED indicators. The project is designed to be with minimal dependencies.
 
 ## Features
-- Reads temperature data from a temperature sensor (specific sensor model can be added in the future).
+- Reads temperature data from a temperature sensor and shows this in a temperature guage (specific sensor model can be added in the future).
 - Displays temperature using **LED indicators** (different LEDs correspond to different temperature thresholds).
 - Fully implemented in C, suitable for bare metal systems with no OS.
 - Easy to extend for additional sensors or functionalities.
