@@ -12,7 +12,7 @@ I2C_Status I2C_Read(uint8_t dev_addr, uint8_t reg_addr, uint8_t* data, uint16_t 
     if (dev_addr == 0x50) { // EEPROM address
         data[0] = 1; // Simulate Rev-B
         for (int i = 1; i < len; i++) {
-            data[i] = 'A' + (i - 1); // Simulate serial number "ABCDEF..."
+            data[i] = 'A' + (i - 1); // Simulate serial number "ABCDEF"
         }
         return I2C_SUCCESS;
     }

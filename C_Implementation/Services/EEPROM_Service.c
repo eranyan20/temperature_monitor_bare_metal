@@ -22,7 +22,9 @@ EEPROM_Config EEPROM_ReadConfig(void) {
     else {
         // Default values if I2C read fails
         config.revision = 1; // Rev-B
-        sprintf_s(config.serial, sizeof(config.serial), "ZEISS-1234"); // Default serial number
+        //sprintf_s(config.serial, sizeof(config.serial), "ZEISS-1234"); // Default serial number
+	sprintf(config.serial, "ZEISS-1234"); // Default serial number
+
     }
 
     printf("[EEPROM] Read Config: Revision = %d, Serial = %s\n", config.revision, config.serial);
