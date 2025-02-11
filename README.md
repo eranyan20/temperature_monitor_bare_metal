@@ -10,9 +10,28 @@ This project implements a **temperature monitoring system** on bare metal hardwa
 - Easy to extend for additional sensors or functionalities.
 
 ## Directory Structure
-temperature_monitor_bare_metal/ ├── Application/ # Application code │ └── App.c # Main application logic for the temperature monitor ├── HAL/ # Hardware Abstraction Layer (drivers and hardware setup) │ ├── ADC_Driver.c # ADC driver for reading analog data │ ├── GPIO_Driver.c # GPIO driver for controlling LEDs and other pins │ └── I2C_Driver.c # I2C driver for communication with sensors ├── Hardware/ # Hardware-specific configurations │ └── Microcontroller.c # Microcontroller initialization and configuration ├── Include/ # Header files for the project │ ├── ADC_Driver.h # Header for ADC driver │ ├── EEPROM_Service.h # Header for EEPROM service │ ├── GPIO_Driver.h # Header for GPIO driver │ ├── I2C_Driver.h # Header for I2C driver │ ├── LED_Service.h # Header for LED control service │ ├── Microcontroller.h # Header for microcontroller settings │ └── temperature_Service.h # Header for temperature service ├── Makefile # Makefile to build the project ├── obj/ # Compiled object files │ └── Application/ # Object files for application source files ├── Services/ # Service layer code │ ├── EEPROM_Service.c # Service for reading/writing EEPROM data │ ├── LED_service.c # Service for controlling LEDs │ └── temperature_Service.c # Service for temperature sensing logic └── bin/ # Compiled binaries (output directory) └── temp_mon.out # Final compiled executable
-
-
+── C_Implementation
+│   ├── Application
+│   │   └── App.c
+│   ├── HAL
+│   │   ├── ADC_Driver.c
+│   │   ├── GPIO_Driver.c
+│   │   └── I2C_Driver.c
+│   ├── Hardware
+│   │   └── Microcontroller.c
+│   ├── Include
+│   │   ├── ADC_Driver.h
+│   │   ├── EEPROM_Service.h
+│   │   ├── GPIO_Driver.h
+│   │   ├── I2C_Driver.h
+│   │   ├── LED_Service.h
+│   │   ├── Microcontroller.h
+│   │   └── temperature_Service.h
+│   ├── Makefile
+│   └── Services
+│       ├── EEPROM_Service.c
+│       ├── LED_service.c
+│       └── temperature_Service.c
 
 ## Prerequisites
 - C compiler (GCC).
