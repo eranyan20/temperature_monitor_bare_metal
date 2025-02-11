@@ -13,7 +13,7 @@ void Clock_Init(ClockSource source, uint32_t frequency) {
     case CLOCK_SOURCE_PLL: source_str = "PLL"; break;
     default: source_str = "Unknown"; break;
     }
-    printf("[Clock] Initialized with source: %s, frequency: %lu Hz\n", source_str, frequency);
+    printf("[Clock] Initialized with source: %s, frequency: %u Hz\n", source_str, frequency);
 }
 
 // System Initialization
@@ -35,13 +35,13 @@ void Interrupt_Init(void) {
 
 // System Tick Initialization
 void SysTick_Init(uint32_t interval_ms) {
-    printf("[SysTick] Initializing with interval: %lu ms\n", interval_ms);
+    printf("[SysTick] Initializing with interval: %u ms\n", interval_ms);
     // Configure the SysTick timer for the given interval
 }
 
 // Timer Initialization
 void Timer_Init(uint32_t interval_us) {
-    printf("[Timer] Initialized with interval: %lu µs\n", interval_us);
+    printf("[Timer] Initialized with interval: %u Microseconds\n", interval_us);
 }
 
 // Busy-wait loop to simulate 100µs delay

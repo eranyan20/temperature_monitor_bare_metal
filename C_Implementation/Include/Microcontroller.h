@@ -29,6 +29,8 @@ void SysTick_Init(uint32_t interval_ms);
 void TIMER_IRQHandler(void); // Timer ISR
 void ADC_IRQHandler(void);   // ADC ISR
 
+void delay_us(uint32_t us);
+
 // Simulated Interrupt Flags
 extern volatile bool timer_flag;
 extern volatile bool adc_flag;
