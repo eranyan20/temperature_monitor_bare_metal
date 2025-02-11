@@ -71,3 +71,40 @@ Within the bin folder temp_mon.out file would be generated, execute it on the co
 
 ./bin/temp_mon.out
 ```
+## Expected Output
+The Temperature guage shows the sweeping of temperature from -5 to 120 Degree celcius and returns back to -5 on a loop.
+The LED Indicator should have the right LED glowing for the respective temperature reported. The expected output somehow looks like this.
+
+```bash
+
+eranyan20@ProgressivKI:~/Desktop/cpp_repo/temperature_monitor_bare_metal/C_Implementation/bin$ ./temp_mon.out 
+[Clock] Initialized with source: HSI, frequency: 25000000 Hz
+[Interrupt] Initializing...
+[SysTick] Initializing with interval: 1 ms
+[System] Initialized
+[Timer] Initialized with interval: 100 �s
+[GPIO] Initialized
+[ADC] Initialized
+[I2C] Initialized
+[EEPROM] Initialized
+[Temperature Sensor] Initialized
+[LED Controller] Initialized
+[I2C] Read from device 0x50, register 0x00
+[EEPROM] Read Config: Revision = 1, Serial = ABCDEFGHIJKLMNOP
+[Timer] Started
+Temperature:   -4.0 C [#                                       ]       
+Temperature:   -3.0 C [##                                      ]       
+Temperature:   -2.0 C [##                                      ]       
+Temperature:   -1.0 C [##                                      ]       
+Temperature:    0.0 C [###                                     ]       
+Temperature:    1.0 C [###                                     ]       
+Temperature:    2.0 C [###                                     ]       
+Temperature:    3.0 C [####                                    ]       
+Temperature:    4.0 C [####                                    ]       
+Temperature:    5.0 C [####                                    ]       
+Temperature:    6.0 C [####                                    ]       
+Temperature:    7.0 C [#####                                   ]       
+Temperature:    8.0 C [#####                                   ]       
+LED Status: ( ) Critical  ( ) Warning  (*) Normal
+
+```
