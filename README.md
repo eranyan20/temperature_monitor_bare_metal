@@ -12,7 +12,6 @@ This project implements a **temperature monitoring system** on bare metal hardwa
 ## Directory Structure
 ```bash
 └── temperature_monitor_bare_metal
-    ├── 21
     ├── C_Implementation
     │   ├── Application
     │   │   └── App.c
