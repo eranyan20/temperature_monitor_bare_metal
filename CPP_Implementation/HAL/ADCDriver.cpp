@@ -1,6 +1,6 @@
 #include "ADCDriver.hpp"
 
-ADCDriver::ADCDriver() : currentTemp(-5.0f), step(0.1f), increasing(true) {}
+ADCDriver::ADCDriver() : currentTemp(-5.0f), step(1.0f), increasing(true) {}
 
 bool ADCDriver::init() {
     return true;
@@ -21,3 +21,4 @@ uint16_t ADCDriver::readChannel() {
     }
     return static_cast<uint16_t>(currentTemp * 10);
 }
+

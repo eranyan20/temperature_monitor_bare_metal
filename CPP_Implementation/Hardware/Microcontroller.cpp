@@ -1,7 +1,7 @@
 #include "Microcontroller.hpp"
 
-std::atomic<bool> Microcontroller::timer_flag = false;
-std::atomic<bool> Microcontroller::adc_flag = false;
+std::atomic<bool> Microcontroller::timer_flag{false};
+std::atomic<bool> Microcontroller::adc_flag{false};
 
 Microcontroller::Microcontroller() {}
 

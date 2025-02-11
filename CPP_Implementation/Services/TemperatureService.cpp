@@ -1,4 +1,5 @@
 #include "TemperatureService.hpp"
+#include <iostream>
 
 TemperatureService::TemperatureService(ADCDriver& adcDriver, EEPROMService& eepromService, LEDService& ledServ)
     : adc(adcDriver), eeprom(eepromService), ledService(ledServ), lastTemperature(0.0f) {
@@ -9,7 +10,8 @@ bool TemperatureService::init() {
 }
 
 float TemperatureService::readTemperature() {
-    uint16_t rawValue = adc.readChannel();
+
+    int16_t rawValue = adc.readChannel();
     float temperature;
 
     if (eeprom.getHardwareRevision() == 0) {
