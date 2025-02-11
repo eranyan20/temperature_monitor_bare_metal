@@ -51,15 +51,23 @@ This project implements a **temperature monitoring system** on bare metal hardwa
 Follow these steps to clone the repository and get the project up and running:
 
 ### 1. Clone the Repository
+```bash
+
 git clone https://github.com/eranyan20/temperature_monitor_bare_metal.git
 
 cd temperature_monitor_bare_metal
-
+```
 ### 2. Build the Project
 To compile and build the project, simply run the make command:
+```bash
 make clean
+
 make
+```
 
 ### 3. Run the Application
 Within the bin folder temp_mon.out file would be generated, execute it on the console.
+```bash
+
 ./bin/temp_mon.out
+```
