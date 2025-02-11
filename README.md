@@ -52,11 +52,12 @@ Follow these steps to clone the repository and get the project up and running:
 
 ### 1. Clone the Repository
 git clone https://github.com/eranyan20/temperature_monitor_bare_metal.git
+
 cd temperature_monitor_bare_metal
 
 ### 2. Build the Project
 To compile and build the project, simply run the make command:
-
+make clean
 make
 
 ### 3. Run the Application
